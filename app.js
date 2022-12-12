@@ -96,3 +96,81 @@ for (element of ninjaTurtles) {
 
 // REMEMBER! -- .toUpperCase() is a method of the String.prototype, not the Array.prototype
 // this method is not defined on an array, it's defined on string objects
+
+/////////////////////////
+// Methods, Revisited
+
+const favMovies = [
+  "Jaws",
+  "The Fellowship of the Ring",
+  "Howl's Moving Castle",
+  "Django Unchained",
+  "Cloud Atlas",
+  "The Usual Suspects",
+  "Toy Story",
+  "Conan the Barbarian",
+  "Titanic",
+  "Harry Potter",
+  "Fried Green Tomatoes",
+  "Volver",
+  "Oculus",
+  "Seven",
+  "Black Panther",
+  "Harry Potter",
+  "Imitation of Life",
+  "Snatch",
+  "Fast and Furious",
+];
+
+// Console log: the index of Titanic
+console.log(favMovies.findIndex((element) => element === "Titanic"));
+console.log(favMovies.indexOf("Titanic"));
+
+// 1. use the .sort method Thought question: what did this do to the array? Did it permanently alter it?
+favMovies.sort();
+
+// This method sorted the elements of the array in place and returned the reference to the same array.
+
+// 2. Use the method pop  --  Removes the last element from an array
+favMovies.pop();
+
+// 3. push "Guardians of the Galaxy"  --  Adds element(s) to the end of an array
+favMovies.push("Guardians of the Galaxy");
+
+// 4. Reverse the array  --  Reverses an array in place
+favMovies.reverse();
+
+// 5. Use the shift method  --  Removes the first element from an array
+favMovies.shift();
+
+// 6. unshift - What does it return? --  It returns the new length of the array after adding element(s) to the beginning of the array
+favMovies.unshift("Forest Gump");
+
+// 7. splice "Django Unchained" and add "Avatar" (try finding the index of "Django Unchained", instead of counting it yourself) Thought question: did this permanently alter our array?
+// Yes, the splice method alters the array contents
+// Syntax: splice(start, deleteCount, item1)
+
+favMovies.splice(favMovies.indexOf("Django Unchained"), 1, "Avatar");
+
+// 8. slice the last half of the array (challenge yourself and try to programatically determine the middle of the array rather than counting it and hard coding it) - Thought question: did this permanently alter our array?
+// Syntax: slice(start, end) -- end not included
+
+// adding another element for simplicity, so length = 20
+favMovies.push("Top Gun");
+console.log(favMovies.length);
+
+// 9. Store the value of your slice in a variable, console.log it - Thought question: what is going on here?
+let lastHalf = favMovies.slice(favMovies.length / 2, favMovies.length);
+console.log(lastHalf);
+
+// 10. console.log your final results
+console.log(favMovies);
+
+// 11. After running the above tasks, console.log the index of "Fast and Furious" - We removed it from the array, what value do we get when we look for the index of something that is not in the array?
+console.log(favMovies.indexOf("Fast and the Furious"));
+
+// We get the value -1 if the element is not in the array
+
+// 12. Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
+
+// We were able to change the array because the const declaration prevents us from reassigning the variable, but it does not prevent us from modifying the contents of the array.

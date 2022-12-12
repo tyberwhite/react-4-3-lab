@@ -17,10 +17,21 @@
 ///////////////////////////////
 
 // Write a for loop that will log the numbers 1 through 20.
-function logTheNums() {
-  for (let i = 1; i <= 20; i++) {
+function logTheNums(upperBound) {
+  for (let i = 1; i <= upperBound; i++) {
     console.log(i);
   }
 }
 
-// logTheNums();
+// logTheNums(20);
+
+// Write a for loop that will log only the even numbers in 0 through 200.
+function logTheEvens(upperBound) {
+  for (let i = 0; i <= upperBound; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+  }
+}
+
+// logTheEvens(200);

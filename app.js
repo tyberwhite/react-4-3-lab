@@ -174,3 +174,23 @@ console.log(favMovies.indexOf("Fast and the Furious"));
 // 12. Thought question: that we declared the variable favMovies with const, and yet, we were allowed to change the array. Weird? Should we have used let?
 
 // We were able to change the array because the const declaration prevents us from reassigning the variable, but it does not prevent us from modifying the contents of the array.
+
+////////////////////
+// Where is Waldo
+
+const whereIsWaldo = [
+  ["Timmy", "Frank"],
+  "Eggbert",
+  ["Lucinda", "Jacc", "Neff", "Snoop"],
+  ["Petunia", ["Baked Goods", "Waldo"]],
+];
+
+// Remove Eggbert (hint look at the slice/splice method(s))
+// Change "Neff" to "No One"
+// Access and console.log "Waldo"
+
+whereIsWaldo.splice(whereIsWaldo.indexOf("Eggbert"), 1);
+
+whereIsWaldo[1][2] = "No One";
+
+console.log(whereIsWaldo);

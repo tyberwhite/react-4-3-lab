@@ -55,4 +55,26 @@ function fizzBuzz(lowerBound, upperBound) {
   }
 }
 
-fizzBuzz(1, 100);
+// fizzBuzz(1, 100);
+
+/////////////////////
+// Wild Wild Life
+// Use the following arrays to answer the questions below (name,species ,age, hometown): You should be modifying the elements by accessing them. It is up to you which methods to use.
+
+const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"];
+const sharky = ["Sharky", "shark", 20, "Left Coast"];
+const plantee = ["Plantee", "plant", 5000, "Mordor"];
+const porgee = ["Porgee", "Porg", 186, "Ahch-To"];
+const dart = ["D'Art", "Demogorgan Dog", 2, "Upside Down"];
+
+// 1. Plantee just had her birthday; change Plantee's array to reflect her being a year older.
+plantee[2]++;
+
+// 2. Change Wolfy's hometown from "Yukon Territory" to "Gotham City".
+wolfy[3] = "Gotham City";
+
+// 3. Give D'Art a second hometown by adding "Hawkins"
+dart[4] = "Hawkins";
+
+// 4. Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfy array and replace it with "Gameboy".
+wolfy[0] = "Gameboy";

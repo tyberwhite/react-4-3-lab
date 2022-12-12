@@ -78,3 +78,21 @@ dart[4] = "Hawkins";
 
 // 4. Porgee decides that Wolfy can't be named "Wolfy" anymore. Remove "Wolfy" from the wolfy array and replace it with "Gameboy".
 wolfy[0] = "Gameboy";
+
+/////////////////////////////
+// Yell at the Ninja Turtles
+
+// 1. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
+
+const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+
+// 2. Use a for of loop(not a typo - try it out! Try a for ofloop) to call toUpperCase() on each of them and print out the result.
+// Syntax: for (variable of iterable) statement
+
+for (element of ninjaTurtles) {
+  element = element.toUpperCase();
+  console.log(element);
+}
+
+// REMEMBER! -- .toUpperCase() is a method of the String.prototype, not the Array.prototype
+// this method is not defined on an array, it's defined on string objects

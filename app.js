@@ -35,3 +35,24 @@ function logTheEvens(upperBound) {
 }
 
 // logTheEvens(200);
+
+//////////////
+// Fizz Buzz
+// 1. Write a javascript application that logs all numbers from 1 - 100.
+// 2. If a number is divisible by 3 log "Fizz" instead of the number.
+// 3. If a number is divisible by 5 log "Buzz" instead of the number.
+// 4. If a number is divisible by 3 and 5 log "FizzBuzz" instead of the number.
+
+function fizzBuzz(lowerBound, upperBound) {
+  for (let i = lowerBound; i <= upperBound; i++) {
+    if (i % 15 === 0) {
+      console.log(i, "FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log(i, "Fizz");
+    } else if (i % 5 === 0) {
+      console.log(i, "Buzz");
+    }
+  }
+}
+
+fizzBuzz(1, 100);
